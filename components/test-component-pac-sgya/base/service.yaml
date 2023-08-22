@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: test-component-pac-sgya
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: test-component-pac-sgya
+    app.kubernetes.io/part-of: build-suite-test-application-xpmg
+  name: test-component-pac-sgya
+spec:
+  ports:
+  - port: 8081
+    targetPort: 8081
+  selector:
+    app.kubernetes.io/instance: test-component-pac-sgya
+status:
+  loadBalancer: {}
